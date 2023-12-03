@@ -1,0 +1,323 @@
+-- init
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local venyx = library.new("SCP: The Red Lake", 5013109572)
+
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+-- first page
+local page = venyx:addPage("SCP", 5012544693)
+local section1 = page:addSection("Hitbox Extender")
+
+
+
+section1:addButton("NPC MONSTER", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.F then
+local hbx =10
+local hby =10
+local hbz =10
+for index,value in pairs(game:GetService("Workspace").NPCs.Monsters:GetDescendants()) do
+if value:FindFirstChild("Head")then
+if value.Name ~= game.Players.LocalPlayer.Name then
+value.Head.Transparency =0.5
+value.Head.CanCollide =false
+value.Head.Size = Vector3.new(hbx, hby, hbz)
+value.HumanoidRootPart.Transparency =0.5
+value.HumanoidRootPart.CanCollide =false
+value.HumanoidRootPart.Size = Vector3.new(hbx, hby, hbz)
+end
+end
+end
+end
+end)
+end)
+section1:addButton("NPC Tango", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.F then
+local hbx =10
+local hby =10
+local hbz =10
+for index,value in pairs(game:GetService("Workspace").NPCs.Tango:GetDescendants()) do
+if value:FindFirstChild("Head")then
+if value.Name ~= game.Players.LocalPlayer.Name then
+value.Head.Transparency =0.5
+value.Head.CanCollide =false
+value.Head.Size = Vector3.new(hbx, hby, hbz)
+value.HumanoidRootPart.Transparency =0.5
+value.HumanoidRootPart.CanCollide =false
+value.HumanoidRootPart.Size = Vector3.new(hbx, hby, hbz)
+end
+end
+end
+end
+end)
+end)
+local page = venyx:addPage("Instant Reload/Fast Reload", 5012544693)
+local section1 = page:addSection("PISTOLS")
+local section2 = page:addSection("SMGS")
+local section3 = page:addSection("RIFLES")
+local section4 = page:addSection("LMGS")
+local section5 = page:addSection("SHOTGUNS")
+section1:addButton("G18", function()
+    local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.G18.Main:FireServer(ohString1)
+end
+end)
+end)
+section1:addButton("M1911", function()
+    local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.M1911.Main:FireServer(ohString1)
+end
+end)
+end)
+section5:addButton("Shorty", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.Shorty.Main:FireServer(ohString1)
+end
+end)
+end)
+section5:addButton("Scattergun", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.Scattergun.Main:FireServer(ohString1)
+end
+end)
+end)
+section2:addButton("UZI", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.UZI.Main:FireServer(ohString1)
+end
+end)
+end)
+section2:addButton("Vector", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.Vector.Main:FireServer(ohString1)
+end
+end)
+end)
+section2:addButton("MP5", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.MP5.Main:FireServer(ohString1)
+end
+end)
+end)
+section4:addButton("PKM", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.PKM.Main:FireServer(ohString1)
+end
+end)
+end)
+section4:addButton("M249", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.M249.Main:FireServer(ohString1)
+end
+end)
+end)
+
+
+section2:addButton("P90", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.P90.Main:FireServer(ohString1)
+end
+end)
+end)
+section2:addButton("Thompson", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.Thompson.Main:FireServer(ohString1)
+end
+end)
+end)
+
+section3:addButton("AK47", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.AK47.Main:FireServer(ohString1)
+end
+end)
+end)
+section3:addButton("G36", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.G36.Main:FireServer(ohString1)
+end
+end)
+end)
+section3:addButton("CRL10", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.CRL10.Main:FireServer(ohString1)
+end
+end)
+end)
+
+local Special = venyx:addPage("Special", 5012544693)
+local LL = Special:addSection("Special")
+LL:addButton("Akimbo Voids", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute["Akimbo Voids"].Main:FireServer(ohString1)
+end
+end)
+end)
+LL:addButton("MRL4", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.MRL4.Main:FireServer(ohString1)
+end
+end)
+end)
+LL:addButton("ASR", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.ASR.Main:FireServer(ohString1)
+end
+end)
+end)
+LL:addButton("K4LAS", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.K4LAS.Main:FireServer(ohString1)
+end
+end)
+end)
+LL:addButton("M4", function()
+local UIS = game:GetService("UserInputService")
+        UIS.InputBegan:Connect(function(Input, IsTyping)
+	if IsTyping then return end
+	if Input.KeyCode == Enum.KeyCode.R then
+
+local ohString1 = "AMMO"
+
+workspace.mikhailcute.M4.Main:FireServer(ohString1)
+end
+end)
+end)
+
+-- second page
+local theme = venyx:addPage("Theme", 5012544693)
+local colors = theme:addSection("Colors")
+local UI = theme:addSection("Close UI")
+for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+colors:addColorPicker(theme, color, function(color3)
+venyx:setTheme(theme, color3)
+end)
+end
+UI:addKeybind("Toggle Keybind", Enum.KeyCode.F1, function()
+print("Activated Keybind")
+venyx:toggle()
+end, function()
+print("Changed Keybind")
+end)
+
+-- load
+venyx:SelectPage(venyx.pages[1], true)
